@@ -1,0 +1,3 @@
+﻿  01.cpp
+F:\就业\C++\3.代码\Project0312\01.cpp(13,15): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
+  Project0312.vcxproj -> F:\就业\C++\3.代码\Project0312\x64\Debug\Project0312.exe
