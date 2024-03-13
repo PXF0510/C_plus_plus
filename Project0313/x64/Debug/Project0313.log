@@ -1,0 +1,4 @@
+﻿  成员函数做友元.cpp
+F:\就业\C++\3.代码\Project0313\成员函数做友元.cpp(16,4): warning C4150: 删除指向不完整“Building”类型的指针；没有调用析构函数
+F:\就业\C++\3.代码\Project0313\成员函数做友元.cpp(6,7): message : 参见“Building”的声明
+  Project0313.vcxproj -> F:\就业\C++\3.代码\Project0313\x64\Debug\Project0313.exe

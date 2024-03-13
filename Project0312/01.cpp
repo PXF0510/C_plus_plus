@@ -63,7 +63,12 @@ int main()
 	//*********指针&数组**************
 	double arr_d[10] = { 1,2,3,4,5 };
 	double* p_arr_d = arr_d;
-	cout << *p_arr_d << endl;
+	cout << *p_arr_d << endl;                    //指针指向的是数组中第一个元素，解引用即只能得到数组第一个元素
+
+	char str[] = "Hello";
+	char* p_str = str;
+	cout << p_str << endl;                       //传字符串的首地址，cout输出的是整个字符串
+	cout << *p_str << endl;                      //解引用，内容为字符串第一个字符
 	//*********指针&数组-END**************
 
 	//*********结构体**********

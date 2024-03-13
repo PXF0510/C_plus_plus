@@ -8,7 +8,7 @@ using namespace std;
 class String
 {
 public:
-	String(const char* str = 0);          //构造函数
+	String(const char* str = 0);    //构造函数
 	String(const String& s);        //深拷贝，拷贝构造函数
 	String& operator = (const String& s);                              //拷贝赋值
 	~String();                      //析构函数
