@@ -4,6 +4,7 @@ using namespace std;
 
 class Building
 {
+	//全局函数为Building类的友元函数，说明该全局函数可以访问该类下的所有属性（公有、私有、保护的）
 	friend void goodgay(Building* building);
 public:
 	Building(string sr,string br) 

@@ -38,14 +38,14 @@ public:
 	//1、在编译阶段就分配内存；
 	//2、所有对象共享一份数据
 	//3、类内声明，类外初始化
-	//4、静态成员变量也有访问权限
+	//4、静态成员变量也有访问权限，在private域下的静态成员变量，类外不可以访问
 	static int m_data_A;
 
 	//静态成员函数
 	static void func()
 	{
 		m_data_A = 20;          //只能访问静态成员变量
-		//m_data_C = 10;          //不能访问，由于静态成员函数是所有对象共享的，无法区分m_data_C 是哪个对象的
+		//m_data_C = 10;        //不能访问，由于静态成员函数是所有对象共享的，无法区分m_data_C 是哪个对象的
 		cout << "static func 的调用" << endl;
 	}
 
@@ -89,7 +89,7 @@ class CPlus
 public:
 	int m_A;         //非静态成员变量，属于类的对象上
 	static int m_B;
-	mutable int m_C;
+	mutable int m_C; //用于常对象中，说明常对象的该属性可以被修改，或者在常函数中可以被修改
 	void func() {};
 	static void func2() {};
 
@@ -142,7 +142,7 @@ void test4()
 void test5() 
 {
 	CPlus c1(10);          //普通对象
-	const CPlus c2(20);    //常对象
+	const CPlus c2(20);    //常对象，代表其所有属性都不能被随意更改
 	//c2.m_A = 100;          //错误，常对象的属性不可以被修改
 	c2.m_B = 1000;          //?常对象的static变量可以被修改？satic m_B 不是对象c2特有的
 	c2.m_C = 10;           //常对象的mutable变量可以被修改

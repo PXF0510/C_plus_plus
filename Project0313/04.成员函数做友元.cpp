@@ -7,7 +7,7 @@ class Building;
 
 class GoodGay
 {
-public:
+public: 
 	GoodGay();
 	~GoodGay()
 	{
